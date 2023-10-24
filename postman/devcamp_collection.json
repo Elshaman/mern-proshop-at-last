@@ -13,6 +13,30 @@
 				"header": []
 			},
 			"response": []
+		},
+		{
+			"name": "Get single product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/products/:id",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"products",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6536c5aa268da650f10758f1"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
