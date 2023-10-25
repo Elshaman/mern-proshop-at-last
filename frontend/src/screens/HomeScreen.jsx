@@ -3,7 +3,9 @@ import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 //import products from '../_data/products'
 import Product from '../components/Product'
+import Loader from '../components/Loader'
 //ya no necesitamos axios gracias al fetch de api slice : import axios from 'axios'
+import Message from '../components/Message'
 
 import { useGetProductsQuery } from '../_redux/slices/productApiSlice'
 
@@ -15,9 +17,9 @@ const HomeScreen = () => {
   return (
     <>
     {isLoading ? (
-            <h2>Loading...</h2>
+            <Loader />
     ) : error ? ( <div>
-            <div>{error?.data?.message || error.error }</div>
+            <Message variant='danger'>{error?.data?.message || error.error }</Message>
     </div>) : (
       <>
         <h1>Latest Products</h1>
